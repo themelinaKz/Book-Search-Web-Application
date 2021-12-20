@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Αναζήτηση έργων: Penguin Random House</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <script src="/static/js/main.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="http://localhost:8080/showFavorites">Λίστα Αγαπημένων</a>
+            </nav>
+        </header>
+        <h1>Αναζήτηση βιβλίων βάσει τίτλου ή/και συγγραφέα</h1>
+
+        <div>
+            <p>Μπορείτε να αναζητήσετε εύκολα και γρήγορα έργα των αγαπημένων σας συγγραφέων,
+            πληκτρολογώντας το όνομα του συγγραφέα ή τον τίτλο του έργου.</p>
+        </div>
+        
+        <div id="search-area">
+            <label for="search">Αναζήτηση: </label>
+            <input type="text" id="search" placeholder="ex. stephen king">
+            <button type="button" value="submit" id="search_btn">Συνέχεια</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                <th>Κωδικός</th>
+                <th>Τίτλος</th>
+                <th>Συγγραφέας</th>
+                <th>Λίστα Αγαπημένων</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+
+        </table>
+    </body>
+
+</html>

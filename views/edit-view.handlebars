@@ -1,0 +1,14 @@
+<!-- body FORM for editing -->
+
+<form action="http://localhost:8080/showFavorites" onsubmit="saveFavorite()" method="GET" enctype="application/x-www-form-urlencoded">
+    <label for="id">ID</label>
+    <input type="text" name="id" id="id" readonly value="{{id}}">
+    <label for="title">Τίτλος</label>
+    <input type="text" name="title" id="title" value="{{title}}">
+    <label for="author">Συγγραφέας</label>
+    <input type="text" name="author" id="author" value="{{author}}">
+    <label for="comments">Κριτική</label>
+    <textarea name="comments" id="comments">{{comments}}</textarea>
+
+    <button type="submit">Αποθήκευση αλλαγών</button>
+</form>

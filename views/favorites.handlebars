@@ -1,0 +1,47 @@
+<p> Παρακάτω παρουσιάζονται τα αγαπημένα έργα σας. Μπορείτε αν θέλετε να
+    επεξεργαστείτε τον τίτλο και το όνομα του συγγραφέα πατώντας επεξεργασία.
+    Επίσης μπορείτε να προσθέσετε σχόλια για το συγκεκριμένο έργο. 
+</p>
+
+<div id="search-area">
+    <label for="favoriteSearch">Αναζήτηση: </label>
+    <input type="text" id="favoriteSearch">
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Κωδικός</th>
+            <th>Τίτλος</th>
+            <th>Συγγραφέας</th>
+            <th>Λίστα Αγαπημένων</th>
+        </tr>
+    </thead>
+    {{#if favorites}}
+        {{#each favorites}}
+            <tbody class="favorites_row">
+                <tr id='row_{{id}}'>
+                    <td>{{id}}</td>
+                    <td>{{title}}</td>
+                    <td>{{author}}</td>
+                    <td>
+                        <button type='button' value='submit' class='editButton'>
+                            <a href="http://localhost:8080/editFavorite/?id={{id}}" id='edit_{{id}}'>Επεξεργασία</a> 
+                        </button>
+                        <button type='button' id={{id}} value='submit' class='removeButton'>Αφαίρεση</button>
+                    </td>
+                </tr>
+                {{#if comments}}
+                    <tr id='row_{{id}}_com'>
+                        <th scope="row">Τελευταία κριτική</th>
+                        <td colspan='3'>{{comments}}</td>
+                    </tr>
+                {{/if}}
+            </tbody>
+        {{/each}}
+    {{^}}
+    <tbody>
+        <tr><td colspan='4'>Δεν υπάρχουν αγαπημένα έργα.</td></tr>
+    </tbody>
+    {{/if}}
+</table>
